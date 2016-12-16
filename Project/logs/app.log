@@ -1,0 +1,516 @@
+2016-11-03 11:59:05,306 [main            ] [          ] INFO  org.eclipse.jetty.server.Server - jetty-8.1.8.v20121106
+2016-11-03 11:59:05,829 [main            ] [          ] INFO  restx.RestxMainRouterFactory - LOADING MAIN ROUTER
+2016-11-03 11:59:05,835 [main            ] [          ] INFO  restx.RestxMainRouterFactory - 
+--------------------------------------
+ -- RESTX >> LOAD ON REQUEST << >> DEV MODE << >> AUTO COMPILE <<
+ -- for admin console,
+ --   VISIT http://127.0.0.1:8080/api/@/ui/
+ --
+
+2016-11-03 11:59:08,180 [pool-2-thread-1 ] [          ] INFO  restx.classloader.CompilationManager - compilation finished: 19 sources compiled in 2,210 s
+2016-11-03 11:59:08,997 [main            ] [          ] INFO  restx.classloader.CompilationManager - watching for changes in [src/main/java, src/main/resources]; current location is /Users/aymesr/Desktop/Cours/Cours3A/Persistence/Project/.
+2016-11-03 11:59:09,160 [main            ] [          ] INFO  restx.monitor.MetricsConfiguration - registering Metrics JVM metrics
+2016-11-03 11:59:19,257 [qtp1990451863-34] [          ] ERROR restx.RestxMainRouterFactory - [RESTX REQUEST] GET /@/ui/ - Exception when using factory to load router: 
+  QueryByName{name=Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}}
+    |       \__=> Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}
+    |
+    +-> QueryByClass{componentClass=restx.RestxRouter[AppClassLoader]}
+      |       \__=> Name{name='BookResourceRouter', clazz=fr.enseirb.books.web.rest.BookResourceRouter[HotCompile[2]]}
+      |
+      +-> QueryByClass{componentClass=fr.enseirb.books.web.rest.BookResource[HotCompile[2]]}
+        |       \__=> Name{name='BookResource', clazz=fr.enseirb.books.web.rest.BookResource[HotCompile[2]]}
+        |
+        +-> QueryByClass{componentClass=fr.enseirb.books.service.BookService[HotCompile[2]]}
+          |       \__=> Name{name='BookService', clazz=fr.enseirb.books.service.BookService[HotCompile[2]]}
+          |
+          +-> QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]}
+                |
+                +--: component satisfying QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]} not found.
+
+Pro Tip: Set HTTP Header RestxDebug to have a dump of the factory in your logs when you get this error.
+2016-11-03 11:59:19,258 [qtp1990451863-34] [          ] WARN  restx.AbstractResponse - no charset defined while getting writer to write http response. Make sure you call setContentType() before calling getWriter(). Using UTF-8 charset.
+2016-11-03 11:59:19,259 [qtp1990451863-34] [          ] ERROR restx.RestxMainRouterFactory - Error when loading Factory to process your request.
+One or more dependency injections can be sastifed.
+
+  
+    QueryByName{name=Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}}
+      |       \__=> Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}
+      |
+      +-> QueryByClass{componentClass=restx.RestxRouter[AppClassLoader]}
+        |       \__=> Name{name='BookResourceRouter', clazz=fr.enseirb.books.web.rest.BookResourceRouter[HotCompile[2]]}
+        |
+        +-> QueryByClass{componentClass=fr.enseirb.books.web.rest.BookResource[HotCompile[2]]}
+          |       \__=> Name{name='BookResource', clazz=fr.enseirb.books.web.rest.BookResource[HotCompile[2]]}
+          |
+          +-> QueryByClass{componentClass=fr.enseirb.books.service.BookService[HotCompile[2]]}
+            |       \__=> Name{name='BookService', clazz=fr.enseirb.books.service.BookService[HotCompile[2]]}
+            |
+            +-> QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]}
+                  |
+                  +--: component satisfying QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]} not found.
+
+2016-11-03 12:00:14,881 [Thread-1        ] [          ] INFO  o.e.jetty.util.thread.ShutdownThread - shutdown already commenced
+2016-11-03 12:02:51,856 [main            ] [          ] INFO  org.eclipse.jetty.server.Server - jetty-8.1.8.v20121106
+2016-11-03 12:02:52,331 [main            ] [          ] INFO  restx.RestxMainRouterFactory - LOADING MAIN ROUTER
+2016-11-03 12:02:52,338 [main            ] [          ] INFO  restx.RestxMainRouterFactory - 
+--------------------------------------
+ -- RESTX >> LOAD ON REQUEST << >> DEV MODE << >> AUTO COMPILE <<
+ -- for admin console,
+ --   VISIT http://127.0.0.1:8080/api/@/ui/
+ --
+
+2016-11-03 12:02:52,672 [main            ] [          ] INFO  restx.classloader.CompilationManager - watching for changes in [src/main/java, src/main/resources]; current location is /Users/aymesr/Desktop/Cours/Cours3A/Persistence/Project/.
+2016-11-03 12:02:52,816 [main            ] [          ] INFO  restx.monitor.MetricsConfiguration - registering Metrics JVM metrics
+2016-11-03 12:03:01,372 [qtp1990451863-35] [          ] ERROR restx.RestxMainRouterFactory - [RESTX REQUEST] GET /@/ui/ - Exception when using factory to load router: 
+  QueryByName{name=Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}}
+    |       \__=> Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}
+    |
+    +-> QueryByClass{componentClass=restx.RestxRouter[AppClassLoader]}
+      |       \__=> Name{name='BookResourceRouter', clazz=fr.enseirb.books.web.rest.BookResourceRouter[HotCompile[2]]}
+      |
+      +-> QueryByClass{componentClass=fr.enseirb.books.web.rest.BookResource[HotCompile[2]]}
+        |       \__=> Name{name='BookResource', clazz=fr.enseirb.books.web.rest.BookResource[HotCompile[2]]}
+        |
+        +-> QueryByClass{componentClass=fr.enseirb.books.service.BookService[HotCompile[2]]}
+          |       \__=> Name{name='BookService', clazz=fr.enseirb.books.service.BookService[HotCompile[2]]}
+          |
+          +-> QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]}
+                |
+                +--: component satisfying QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]} not found.
+
+Pro Tip: Set HTTP Header RestxDebug to have a dump of the factory in your logs when you get this error.
+2016-11-03 12:03:01,373 [qtp1990451863-35] [          ] WARN  restx.AbstractResponse - no charset defined while getting writer to write http response. Make sure you call setContentType() before calling getWriter(). Using UTF-8 charset.
+2016-11-03 12:03:01,376 [qtp1990451863-35] [          ] ERROR restx.RestxMainRouterFactory - Error when loading Factory to process your request.
+One or more dependency injections can be sastifed.
+
+  
+    QueryByName{name=Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}}
+      |       \__=> Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}
+      |
+      +-> QueryByClass{componentClass=restx.RestxRouter[AppClassLoader]}
+        |       \__=> Name{name='BookResourceRouter', clazz=fr.enseirb.books.web.rest.BookResourceRouter[HotCompile[2]]}
+        |
+        +-> QueryByClass{componentClass=fr.enseirb.books.web.rest.BookResource[HotCompile[2]]}
+          |       \__=> Name{name='BookResource', clazz=fr.enseirb.books.web.rest.BookResource[HotCompile[2]]}
+          |
+          +-> QueryByClass{componentClass=fr.enseirb.books.service.BookService[HotCompile[2]]}
+            |       \__=> Name{name='BookService', clazz=fr.enseirb.books.service.BookService[HotCompile[2]]}
+            |
+            +-> QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]}
+                  |
+                  +--: component satisfying QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]} not found.
+
+2016-11-03 12:03:01,372 [qtp1990451863-34] [          ] ERROR restx.RestxMainRouterFactory - [RESTX REQUEST] GET /@/ui/ - Exception when using factory to load router: 
+  QueryByName{name=Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}}
+    |       \__=> Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}
+    |
+    +-> QueryByClass{componentClass=restx.RestxRouter[AppClassLoader]}
+      |       \__=> Name{name='BookResourceRouter', clazz=fr.enseirb.books.web.rest.BookResourceRouter[HotCompile[2]]}
+      |
+      +-> QueryByClass{componentClass=fr.enseirb.books.web.rest.BookResource[HotCompile[2]]}
+        |       \__=> Name{name='BookResource', clazz=fr.enseirb.books.web.rest.BookResource[HotCompile[2]]}
+        |
+        +-> QueryByClass{componentClass=fr.enseirb.books.service.BookService[HotCompile[2]]}
+          |       \__=> Name{name='BookService', clazz=fr.enseirb.books.service.BookService[HotCompile[2]]}
+          |
+          +-> QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]}
+                |
+                +--: component satisfying QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]} not found.
+
+Pro Tip: Set HTTP Header RestxDebug to have a dump of the factory in your logs when you get this error.
+2016-11-03 12:03:01,379 [qtp1990451863-34] [          ] WARN  restx.AbstractResponse - no charset defined while getting writer to write http response. Make sure you call setContentType() before calling getWriter(). Using UTF-8 charset.
+2016-11-03 12:03:01,380 [qtp1990451863-34] [          ] ERROR restx.RestxMainRouterFactory - Error when loading Factory to process your request.
+One or more dependency injections can be sastifed.
+
+  
+    QueryByName{name=Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}}
+      |       \__=> Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}
+      |
+      +-> QueryByClass{componentClass=restx.RestxRouter[AppClassLoader]}
+        |       \__=> Name{name='BookResourceRouter', clazz=fr.enseirb.books.web.rest.BookResourceRouter[HotCompile[2]]}
+        |
+        +-> QueryByClass{componentClass=fr.enseirb.books.web.rest.BookResource[HotCompile[2]]}
+          |       \__=> Name{name='BookResource', clazz=fr.enseirb.books.web.rest.BookResource[HotCompile[2]]}
+          |
+          +-> QueryByClass{componentClass=fr.enseirb.books.service.BookService[HotCompile[2]]}
+            |       \__=> Name{name='BookService', clazz=fr.enseirb.books.service.BookService[HotCompile[2]]}
+            |
+            +-> QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]}
+                  |
+                  +--: component satisfying QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]} not found.
+
+2016-11-03 12:03:28,703 [Thread-1        ] [          ] INFO  o.e.jetty.util.thread.ShutdownThread - shutdown already commenced
+2016-11-03 12:03:32,932 [main            ] [          ] INFO  org.eclipse.jetty.server.Server - jetty-8.1.8.v20121106
+2016-11-03 12:03:33,456 [main            ] [          ] INFO  restx.RestxMainRouterFactory - LOADING MAIN ROUTER
+2016-11-03 12:03:33,464 [main            ] [          ] INFO  restx.RestxMainRouterFactory - 
+--------------------------------------
+ -- RESTX >> LOAD ON REQUEST << >> DEV MODE << >> AUTO COMPILE <<
+ -- for admin console,
+ --   VISIT http://127.0.0.1:8080/api/@/ui/
+ --
+
+2016-11-03 12:03:33,835 [main            ] [          ] INFO  restx.classloader.CompilationManager - watching for changes in [src/main/java, src/main/resources]; current location is /Users/aymesr/Desktop/Cours/Cours3A/Persistence/Project/.
+2016-11-03 12:03:33,989 [main            ] [          ] INFO  restx.monitor.MetricsConfiguration - registering Metrics JVM metrics
+2016-11-03 12:03:45,142 [qtp1990451863-34] [          ] ERROR restx.RestxMainRouterFactory - [RESTX REQUEST] GET /@/ui/ - Exception when using factory to load router: 
+  QueryByName{name=Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}}
+    |       \__=> Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}
+    |
+    +-> QueryByClass{componentClass=restx.RestxRouter[AppClassLoader]}
+      |       \__=> Name{name='BookResourceRouter', clazz=fr.enseirb.books.web.rest.BookResourceRouter[HotCompile[2]]}
+      |
+      +-> QueryByClass{componentClass=fr.enseirb.books.web.rest.BookResource[HotCompile[2]]}
+        |       \__=> Name{name='BookResource', clazz=fr.enseirb.books.web.rest.BookResource[HotCompile[2]]}
+        |
+        +-> QueryByClass{componentClass=fr.enseirb.books.service.BookService[HotCompile[2]]}
+          |       \__=> Name{name='BookService', clazz=fr.enseirb.books.service.BookService[HotCompile[2]]}
+          |
+          +-> QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]}
+                |
+                +--: component satisfying QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]} not found.
+
+Pro Tip: Set HTTP Header RestxDebug to have a dump of the factory in your logs when you get this error.
+2016-11-03 12:03:45,143 [qtp1990451863-34] [          ] WARN  restx.AbstractResponse - no charset defined while getting writer to write http response. Make sure you call setContentType() before calling getWriter(). Using UTF-8 charset.
+2016-11-03 12:03:45,145 [qtp1990451863-34] [          ] ERROR restx.RestxMainRouterFactory - Error when loading Factory to process your request.
+One or more dependency injections can be sastifed.
+
+  
+    QueryByName{name=Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}}
+      |       \__=> Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}
+      |
+      +-> QueryByClass{componentClass=restx.RestxRouter[AppClassLoader]}
+        |       \__=> Name{name='BookResourceRouter', clazz=fr.enseirb.books.web.rest.BookResourceRouter[HotCompile[2]]}
+        |
+        +-> QueryByClass{componentClass=fr.enseirb.books.web.rest.BookResource[HotCompile[2]]}
+          |       \__=> Name{name='BookResource', clazz=fr.enseirb.books.web.rest.BookResource[HotCompile[2]]}
+          |
+          +-> QueryByClass{componentClass=fr.enseirb.books.service.BookService[HotCompile[2]]}
+            |       \__=> Name{name='BookService', clazz=fr.enseirb.books.service.BookService[HotCompile[2]]}
+            |
+            +-> QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]}
+                  |
+                  +--: component satisfying QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]} not found.
+
+2016-11-03 12:06:28,577 [Thread-1        ] [          ] INFO  o.e.jetty.util.thread.ShutdownThread - shutdown already commenced
+2016-11-03 12:06:37,392 [main            ] [          ] INFO  org.eclipse.jetty.server.Server - jetty-8.1.8.v20121106
+2016-11-03 12:06:37,918 [main            ] [          ] INFO  restx.RestxMainRouterFactory - LOADING MAIN ROUTER
+2016-11-03 12:06:37,925 [main            ] [          ] INFO  restx.RestxMainRouterFactory - 
+--------------------------------------
+ -- RESTX >> LOAD ON REQUEST << >> DEV MODE << >> AUTO COMPILE <<
+ -- for admin console,
+ --   VISIT http://127.0.0.1:8080/api/@/ui/
+ --
+
+2016-11-03 12:06:38,276 [main            ] [          ] INFO  restx.classloader.CompilationManager - watching for changes in [src/main/java, src/main/resources]; current location is /Users/aymesr/Desktop/Cours/Cours3A/Persistence/Project/.
+2016-11-03 12:06:38,424 [main            ] [          ] INFO  restx.monitor.MetricsConfiguration - registering Metrics JVM metrics
+2016-11-03 12:06:48,188 [qtp1990451863-34] [          ] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2016-11-03 12:06:48,195 [qtp1990451863-34] [          ] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.2.6.Final}
+2016-11-03 12:06:48,198 [qtp1990451863-34] [          ] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2016-11-03 12:06:48,200 [qtp1990451863-34] [          ] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2016-11-03 12:06:48,292 [qtp1990451863-34] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:48,621 [qtp1990451863-34] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:48,662 [qtp1990451863-34] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:48,669 [qtp1990451863-34] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:48,798 [qtp1990451863-34] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:48,799 [qtp1990451863-34] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:48,802 [qtp1990451863-34] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:48,803 [qtp1990451863-34] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:48,925 [qtp1990451863-34] [          ] INFO  restx.RestxMainRouterFactory - [RESTX REQUEST] GET /@/ui/ - per request factory created in 1,251 s
+2016-11-03 12:06:49,107 [qtp1990451863-34] [          ] WARN  r.security.RestxSessionCookieFilter - invalid restx session signature. session was: {"principal":"admin","sessionKey":"a9e4ea47-2069-48dd-8091-29e104e97255","_expires":"2016-12-03T10:45:33.317+01:00"}. Ignoring session cookie.
+2016-11-03 12:06:49,368 [qtp1990451863-35] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:49,384 [qtp1990451863-35] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:49,387 [qtp1990451863-35] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:49,390 [qtp1990451863-35] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:49,404 [qtp1990451863-35] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:49,404 [qtp1990451863-35] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:49,407 [qtp1990451863-41] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:49,407 [qtp1990451863-34] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:49,409 [qtp1990451863-39] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:49,424 [qtp1990451863-40] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:49,425 [qtp1990451863-35] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:49,426 [qtp1990451863-35] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:49,429 [qtp1990451863-39] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:49,439 [qtp1990451863-40] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:49,446 [qtp1990451863-34] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:49,455 [qtp1990451863-39] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:49,456 [qtp1990451863-39] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:49,459 [qtp1990451863-39] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:49,459 [qtp1990451863-41] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:49,459 [qtp1990451863-39] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:49,460 [qtp1990451863-40] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:49,460 [qtp1990451863-39] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:49,460 [qtp1990451863-40] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:49,460 [qtp1990451863-39] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:49,461 [qtp1990451863-34] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:49,461 [qtp1990451863-41] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:49,461 [qtp1990451863-34] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:49,461 [qtp1990451863-41] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:49,462 [qtp1990451863-40] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:49,462 [qtp1990451863-40] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:49,463 [qtp1990451863-40] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:49,463 [qtp1990451863-40] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:49,463 [qtp1990451863-34] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:49,463 [qtp1990451863-34] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:49,463 [qtp1990451863-41] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:49,463 [qtp1990451863-41] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:49,463 [qtp1990451863-34] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:49,464 [qtp1990451863-34] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:49,464 [qtp1990451863-41] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:49,464 [qtp1990451863-41] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:49,470 [qtp1990451863-35] [          ] INFO  restx.RestxMainRouterFactory - [RESTX REQUEST] GET /@/ui/css/bootstrap.min.css - per request factory created in 288,4 ms
+2016-11-03 12:06:49,472 [qtp1990451863-35] [          ] WARN  r.security.RestxSessionCookieFilter - invalid restx session signature. session was: {"principal":"admin","sessionKey":"a9e4ea47-2069-48dd-8091-29e104e97255","_expires":"2016-12-03T10:45:33.317+01:00"}. Ignoring session cookie.
+2016-11-03 12:06:49,482 [qtp1990451863-40] [          ] INFO  restx.RestxMainRouterFactory - [RESTX REQUEST] GET /@/webjars/jquery/1.9.1/jquery.min.js - per request factory created in 293,2 ms
+2016-11-03 12:06:49,482 [qtp1990451863-41] [          ] INFO  restx.RestxMainRouterFactory - [RESTX REQUEST] GET /@/ui/css/admin.css - per request factory created in 293,4 ms
+2016-11-03 12:06:49,483 [qtp1990451863-41] [          ] WARN  r.security.RestxSessionCookieFilter - invalid restx session signature. session was: {"principal":"admin","sessionKey":"a9e4ea47-2069-48dd-8091-29e104e97255","_expires":"2016-12-03T10:45:33.317+01:00"}. Ignoring session cookie.
+2016-11-03 12:06:49,485 [qtp1990451863-39] [          ] INFO  restx.RestxMainRouterFactory - [RESTX REQUEST] GET /@/webjars/angularjs/1.0.8/angular.min.js - per request factory created in 297,4 ms
+2016-11-03 12:06:49,486 [qtp1990451863-39] [          ] WARN  r.security.RestxSessionCookieFilter - invalid restx session signature. session was: {"principal":"admin","sessionKey":"a9e4ea47-2069-48dd-8091-29e104e97255","_expires":"2016-12-03T10:45:33.317+01:00"}. Ignoring session cookie.
+2016-11-03 12:06:49,500 [qtp1990451863-34] [          ] INFO  restx.RestxMainRouterFactory - [RESTX REQUEST] GET /@/webjars/bootstrap/2.3.0/js/bootstrap.min.js - per request factory created in 250,6 ms
+2016-11-03 12:06:49,500 [qtp1990451863-34] [          ] WARN  r.security.RestxSessionCookieFilter - invalid restx session signature. session was: {"principal":"admin","sessionKey":"a9e4ea47-2069-48dd-8091-29e104e97255","_expires":"2016-12-03T10:45:33.317+01:00"}. Ignoring session cookie.
+2016-11-03 12:06:49,517 [qtp1990451863-40] [          ] WARN  r.security.RestxSessionCookieFilter - invalid restx session signature. session was: {"principal":"admin","sessionKey":"a9e4ea47-2069-48dd-8091-29e104e97255","_expires":"2016-12-03T10:45:33.317+01:00"}. Ignoring session cookie.
+2016-11-03 12:06:49,646 [qtp1990451863-42] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:49,665 [qtp1990451863-42] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:49,669 [qtp1990451863-42] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:49,669 [qtp1990451863-42] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:49,671 [qtp1990451863-42] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:49,671 [qtp1990451863-42] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:49,672 [qtp1990451863-42] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:49,672 [qtp1990451863-42] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:49,681 [qtp1990451863-42] [          ] INFO  restx.RestxMainRouterFactory - [RESTX REQUEST] GET /@/webjars/angularjs/1.0.8/angular-resource.min.js - per request factory created in 205,5 ms
+2016-11-03 12:06:49,682 [qtp1990451863-42] [          ] WARN  r.security.RestxSessionCookieFilter - invalid restx session signature. session was: {"principal":"admin","sessionKey":"a9e4ea47-2069-48dd-8091-29e104e97255","_expires":"2016-12-03T10:45:33.317+01:00"}. Ignoring session cookie.
+2016-11-03 12:06:49,726 [qtp1990451863-41] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:49,729 [qtp1990451863-41] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:49,733 [qtp1990451863-41] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:49,733 [qtp1990451863-41] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:49,736 [qtp1990451863-41] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:49,736 [qtp1990451863-41] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:49,737 [qtp1990451863-41] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:49,737 [qtp1990451863-41] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:49,759 [qtp1990451863-40] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:49,763 [qtp1990451863-40] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:49,765 [qtp1990451863-40] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:49,766 [qtp1990451863-40] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:49,767 [qtp1990451863-34] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:49,767 [qtp1990451863-40] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:49,768 [qtp1990451863-40] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:49,768 [qtp1990451863-40] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:49,768 [qtp1990451863-40] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:49,778 [qtp1990451863-34] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:49,784 [qtp1990451863-40] [          ] INFO  restx.RestxMainRouterFactory - [RESTX REQUEST] GET /@/ui/js/admin.js - per request factory created in 250,1 ms
+2016-11-03 12:06:49,785 [qtp1990451863-34] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:49,785 [qtp1990451863-35] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:49,786 [qtp1990451863-34] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:49,788 [qtp1990451863-34] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:49,789 [qtp1990451863-34] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:49,788 [qtp1990451863-35] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:49,790 [qtp1990451863-34] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:49,790 [qtp1990451863-34] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:49,791 [qtp1990451863-35] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:49,792 [qtp1990451863-35] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:49,794 [qtp1990451863-35] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:49,794 [qtp1990451863-35] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:49,795 [qtp1990451863-35] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:49,795 [qtp1990451863-35] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:49,800 [qtp1990451863-41] [          ] INFO  restx.RestxMainRouterFactory - [RESTX REQUEST] GET /@/webjars/underscorejs/1.4.4/underscore.min.js - per request factory created in 295,8 ms
+2016-11-03 12:06:49,801 [qtp1990451863-41] [          ] WARN  r.security.RestxSessionCookieFilter - invalid restx session signature. session was: {"principal":"admin","sessionKey":"a9e4ea47-2069-48dd-8091-29e104e97255","_expires":"2016-12-03T10:45:33.317+01:00"}. Ignoring session cookie.
+2016-11-03 12:06:49,803 [qtp1990451863-34] [          ] WARN  r.security.RestxSessionCookieFilter - invalid restx session signature. session was: {"principal":"admin","sessionKey":"a9e4ea47-2069-48dd-8091-29e104e97255","_expires":"2016-12-03T10:45:33.317+01:00"}. Ignoring session cookie.
+2016-11-03 12:06:49,807 [qtp1990451863-40] [          ] WARN  r.security.RestxSessionCookieFilter - invalid restx session signature. session was: {"principal":"admin","sessionKey":"a9e4ea47-2069-48dd-8091-29e104e97255","_expires":"2016-12-03T10:45:33.317+01:00"}. Ignoring session cookie.
+2016-11-03 12:06:49,810 [qtp1990451863-35] [          ] INFO  restx.RestxMainRouterFactory - [RESTX REQUEST] GET /@/ui/js/securityHandling.js - per request factory created in 265,5 ms
+2016-11-03 12:06:49,812 [qtp1990451863-35] [          ] WARN  r.security.RestxSessionCookieFilter - invalid restx session signature. session was: {"principal":"admin","sessionKey":"a9e4ea47-2069-48dd-8091-29e104e97255","_expires":"2016-12-03T10:45:33.317+01:00"}. Ignoring session cookie.
+2016-11-03 12:06:49,908 [qtp1990451863-39] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:49,911 [qtp1990451863-39] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:49,912 [qtp1990451863-42] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:49,913 [qtp1990451863-39] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:49,913 [qtp1990451863-39] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:49,916 [qtp1990451863-39] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:49,916 [qtp1990451863-42] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:49,916 [qtp1990451863-39] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:49,916 [qtp1990451863-39] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:49,917 [qtp1990451863-39] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:49,919 [qtp1990451863-42] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:49,919 [qtp1990451863-42] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:49,921 [qtp1990451863-42] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:49,922 [qtp1990451863-42] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:49,923 [qtp1990451863-42] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:49,926 [qtp1990451863-42] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:49,927 [qtp1990451863-39] [          ] WARN  r.security.RestxSessionCookieFilter - invalid restx session signature. session was: {"principal":"admin","sessionKey":"a9e4ea47-2069-48dd-8091-29e104e97255","_expires":"2016-12-03T10:45:33.317+01:00"}. Ignoring session cookie.
+2016-11-03 12:06:49,929 [qtp1990451863-39] [          ] INFO  restx.StdRestxMainRouter - << [RESTX REQUEST] GET /@/pages >> UNAUTHORIZED - 2,590 ms
+2016-11-03 12:06:49,937 [qtp1990451863-42] [          ] WARN  r.security.RestxSessionCookieFilter - invalid restx session signature. session was: {"principal":"admin","sessionKey":"a9e4ea47-2069-48dd-8091-29e104e97255","_expires":"2016-12-03T10:45:33.317+01:00"}. Ignoring session cookie.
+2016-11-03 12:06:49,941 [qtp1990451863-42] [          ] INFO  restx.StdRestxMainRouter - << [RESTX REQUEST] GET /sessions/current >> UNAUTHORIZED - 3,906 ms
+2016-11-03 12:06:49,984 [qtp1990451863-41] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:49,987 [qtp1990451863-41] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:49,992 [qtp1990451863-41] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:49,993 [qtp1990451863-41] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:49,995 [qtp1990451863-41] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:49,995 [qtp1990451863-41] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:49,996 [qtp1990451863-41] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:49,996 [qtp1990451863-41] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:50,003 [qtp1990451863-41] [          ] WARN  r.security.RestxSessionCookieFilter - invalid restx session signature. session was: {"principal":"admin","sessionKey":"a9e4ea47-2069-48dd-8091-29e104e97255","_expires":"2016-12-03T10:45:33.317+01:00"}. Ignoring session cookie.
+2016-11-03 12:06:50,137 [qtp1990451863-34] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:50,140 [qtp1990451863-34] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:50,149 [qtp1990451863-34] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:50,163 [qtp1990451863-34] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:50,166 [qtp1990451863-34] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:50,168 [qtp1990451863-34] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:50,169 [qtp1990451863-34] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:50,170 [qtp1990451863-34] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:50,170 [qtp1990451863-35] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:50,175 [qtp1990451863-40] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:50,177 [qtp1990451863-35] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:50,178 [qtp1990451863-40] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:50,183 [qtp1990451863-35] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:50,184 [qtp1990451863-40] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:50,184 [qtp1990451863-35] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:50,184 [qtp1990451863-40] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:50,187 [qtp1990451863-35] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:50,187 [qtp1990451863-35] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:50,187 [qtp1990451863-35] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:50,188 [qtp1990451863-35] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:50,191 [qtp1990451863-40] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:50,191 [qtp1990451863-40] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:50,191 [qtp1990451863-40] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:50,192 [qtp1990451863-40] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:50,197 [qtp1990451863-35] [          ] WARN  r.security.RestxSessionCookieFilter - invalid restx session signature. session was: {"principal":"admin","sessionKey":"a9e4ea47-2069-48dd-8091-29e104e97255","_expires":"2016-12-03T10:45:33.317+01:00"}. Ignoring session cookie.
+2016-11-03 12:06:50,199 [qtp1990451863-40] [          ] WARN  r.security.RestxSessionCookieFilter - invalid restx session signature. session was: {"principal":"admin","sessionKey":"a9e4ea47-2069-48dd-8091-29e104e97255","_expires":"2016-12-03T10:45:33.317+01:00"}. Ignoring session cookie.
+2016-11-03 12:06:50,216 [qtp1990451863-39] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:50,218 [qtp1990451863-39] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:50,220 [qtp1990451863-39] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:50,220 [qtp1990451863-39] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:50,222 [qtp1990451863-39] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:50,222 [qtp1990451863-39] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:50,223 [qtp1990451863-39] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:50,223 [qtp1990451863-39] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:50,228 [qtp1990451863-41] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:50,231 [qtp1990451863-41] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:50,231 [qtp1990451863-42] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:50,233 [qtp1990451863-41] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:50,233 [qtp1990451863-34] [          ] WARN  r.security.RestxSessionCookieFilter - invalid restx session signature. session was: {"principal":"admin","sessionKey":"a9e4ea47-2069-48dd-8091-29e104e97255","_expires":"2016-12-03T10:45:33.317+01:00"}. Ignoring session cookie.
+2016-11-03 12:06:50,234 [qtp1990451863-42] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:50,248 [qtp1990451863-42] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:50,249 [qtp1990451863-42] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:50,249 [qtp1990451863-39] [          ] WARN  r.security.RestxSessionCookieFilter - invalid restx session signature. session was: {"principal":"admin","sessionKey":"a9e4ea47-2069-48dd-8091-29e104e97255","_expires":"2016-12-03T10:45:33.317+01:00"}. Ignoring session cookie.
+2016-11-03 12:06:50,256 [qtp1990451863-42] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:50,257 [qtp1990451863-42] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:50,258 [qtp1990451863-42] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:50,259 [qtp1990451863-42] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:50,272 [qtp1990451863-42] [          ] WARN  r.security.RestxSessionCookieFilter - invalid restx session signature. session was: {"principal":"admin","sessionKey":"a9e4ea47-2069-48dd-8091-29e104e97255","_expires":"2016-12-03T10:45:33.317+01:00"}. Ignoring session cookie.
+2016-11-03 12:06:50,289 [qtp1990451863-41] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:50,292 [qtp1990451863-41] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:50,292 [qtp1990451863-41] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:50,293 [qtp1990451863-41] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:50,293 [qtp1990451863-41] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:50,310 [qtp1990451863-41] [          ] WARN  r.security.RestxSessionCookieFilter - invalid restx session signature. session was: {"principal":"admin","sessionKey":"a9e4ea47-2069-48dd-8091-29e104e97255","_expires":"2016-12-03T10:45:33.317+01:00"}. Ignoring session cookie.
+2016-11-03 12:06:50,324 [qtp1990451863-34] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:50,326 [qtp1990451863-40] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:50,330 [qtp1990451863-40] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:50,332 [qtp1990451863-40] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:50,333 [qtp1990451863-40] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:50,335 [qtp1990451863-40] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:50,335 [qtp1990451863-40] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:50,336 [qtp1990451863-40] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:50,336 [qtp1990451863-40] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:50,335 [qtp1990451863-35] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:50,343 [qtp1990451863-35] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:50,345 [qtp1990451863-35] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:50,345 [qtp1990451863-35] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:50,345 [qtp1990451863-40] [          ] WARN  r.security.RestxSessionCookieFilter - invalid restx session signature. session was: {"principal":"admin","sessionKey":"a9e4ea47-2069-48dd-8091-29e104e97255","_expires":"2016-12-03T10:45:33.317+01:00"}. Ignoring session cookie.
+2016-11-03 12:06:50,347 [qtp1990451863-35] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:50,348 [qtp1990451863-35] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:50,349 [qtp1990451863-34] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:50,350 [qtp1990451863-35] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:50,350 [qtp1990451863-35] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:50,351 [qtp1990451863-34] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:50,352 [qtp1990451863-34] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:50,356 [qtp1990451863-34] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:50,356 [qtp1990451863-35] [          ] WARN  r.security.RestxSessionCookieFilter - invalid restx session signature. session was: {"principal":"admin","sessionKey":"a9e4ea47-2069-48dd-8091-29e104e97255","_expires":"2016-12-03T10:45:33.317+01:00"}. Ignoring session cookie.
+2016-11-03 12:06:50,356 [qtp1990451863-34] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:50,357 [qtp1990451863-34] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:50,357 [qtp1990451863-34] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:50,365 [qtp1990451863-34] [          ] WARN  r.security.RestxSessionCookieFilter - invalid restx session signature. session was: {"principal":"admin","sessionKey":"a9e4ea47-2069-48dd-8091-29e104e97255","_expires":"2016-12-03T10:45:33.317+01:00"}. Ignoring session cookie.
+2016-11-03 12:06:52,608 [qtp1990451863-34] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:52,610 [qtp1990451863-34] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:52,612 [qtp1990451863-34] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:52,613 [qtp1990451863-34] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:52,614 [qtp1990451863-34] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:52,614 [qtp1990451863-34] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:52,615 [qtp1990451863-34] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:52,615 [qtp1990451863-34] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:52,623 [qtp1990451863-34] [          ] WARN  r.security.RestxSessionCookieFilter - invalid restx session signature. session was: {"principal":"admin","sessionKey":"a9e4ea47-2069-48dd-8091-29e104e97255","_expires":"2016-12-03T10:45:33.317+01:00"}. Ignoring session cookie.
+2016-11-03 12:06:52,693 [qtp1990451863-34] [          ] INFO  restx.StdRestxMainRouter - << [RESTX REQUEST] POST /sessions >> UNAUTHORIZED - 71,45 ms
+2016-11-03 12:06:55,615 [qtp1990451863-41] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:55,619 [qtp1990451863-41] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:55,621 [qtp1990451863-41] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:55,622 [qtp1990451863-41] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:55,624 [qtp1990451863-41] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:55,624 [qtp1990451863-41] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:55,625 [qtp1990451863-41] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:55,625 [qtp1990451863-41] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:55,634 [qtp1990451863-41] [          ] WARN  r.security.RestxSessionCookieFilter - invalid restx session signature. session was: {"principal":"admin","sessionKey":"a9e4ea47-2069-48dd-8091-29e104e97255","_expires":"2016-12-03T10:45:33.317+01:00"}. Ignoring session cookie.
+2016-11-03 12:06:55,756 [qtp1990451863-41] [          ] INFO  restx.StdRestxMainRouter - << [RESTX REQUEST] POST /sessions >> OK - 122,1 ms
+2016-11-03 12:06:55,844 [qtp1990451863-40] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:55,849 [qtp1990451863-40] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:55,852 [qtp1990451863-40] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:55,852 [qtp1990451863-40] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:55,854 [qtp1990451863-40] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:55,854 [qtp1990451863-40] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:55,854 [qtp1990451863-40] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:55,855 [qtp1990451863-40] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:55,992 [qtp1990451863-34] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:55,993 [qtp1990451863-39] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:55,995 [qtp1990451863-39] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:55,996 [qtp1990451863-34] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:56,009 [qtp1990451863-39] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:56,010 [qtp1990451863-39] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:56,011 [qtp1990451863-42] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:56,011 [qtp1990451863-39] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:56,011 [qtp1990451863-39] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:56,012 [qtp1990451863-39] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:56,012 [qtp1990451863-39] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:56,013 [qtp1990451863-42] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:56,015 [qtp1990451863-34] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:56,015 [qtp1990451863-42] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:56,016 [qtp1990451863-42] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:56,018 [qtp1990451863-42] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:56,018 [qtp1990451863-42] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:56,018 [qtp1990451863-42] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:56,018 [qtp1990451863-42] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:56,020 [qtp1990451863-34] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:56,021 [qtp1990451863-34] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:56,021 [qtp1990451863-34] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:56,022 [qtp1990451863-34] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:56,022 [qtp1990451863-34] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:56,083 [qtp1990451863-41] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:56,085 [qtp1990451863-41] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:56,087 [qtp1990451863-41] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:56,088 [qtp1990451863-41] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:56,092 [qtp1990451863-41] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:56,092 [qtp1990451863-41] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:56,093 [qtp1990451863-41] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:56,095 [qtp1990451863-41] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:56,139 [qtp1990451863-40] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:56,141 [qtp1990451863-40] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:56,143 [qtp1990451863-40] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:56,144 [qtp1990451863-40] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:56,146 [qtp1990451863-40] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:56,146 [qtp1990451863-40] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:56,146 [qtp1990451863-40] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:56,147 [qtp1990451863-40] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:56,197 [qtp1990451863-35] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:56,200 [qtp1990451863-35] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:56,203 [qtp1990451863-35] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:56,203 [qtp1990451863-35] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:56,204 [qtp1990451863-42] [          ] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl
+2016-11-03 12:06:56,207 [qtp1990451863-42] [          ] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-11-03 12:06:56,204 [qtp1990451863-35] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:56,208 [qtp1990451863-35] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:56,208 [qtp1990451863-35] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:56,209 [qtp1990451863-35] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:56,210 [qtp1990451863-42] [          ] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-11-03 12:06:56,211 [qtp1990451863-42] [          ] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2016-11-03 12:06:56,212 [qtp1990451863-42] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-11-03 12:06:56,213 [qtp1990451863-42] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+2016-11-03 12:06:56,213 [qtp1990451863-42] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+2016-11-03 12:06:56,213 [qtp1990451863-42] [          ] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+2016-11-03 12:06:56,228 [qtp1990451863-35] [admin     ] INFO  restx.StdRestxMainRouter - << [RESTX REQUEST] GET /@/pages >> OK - 13,37 ms
+2016-11-03 12:06:56,231 [qtp1990451863-42] [admin     ] INFO  restx.StdRestxMainRouter - << [RESTX REQUEST] GET /sessions/current >> OK - 11,26 ms
+2016-11-03 12:09:14,168 [pool-3-thread-1 ] [          ] INFO  restx.classloader.CompilationManager - compilation finished: 1 sources compiled in 740,2 ms
+2016-11-03 21:02:00,199 [pool-3-thread-1 ] [          ] INFO  restx.classloader.CompilationManager - compilation finished: 1 sources compiled in 238,3 ms
+2016-11-03 21:43:21,875 [Thread-1        ] [          ] INFO  o.e.jetty.util.thread.ShutdownThread - shutdown already commenced

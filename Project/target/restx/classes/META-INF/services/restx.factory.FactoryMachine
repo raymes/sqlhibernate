@@ -1,0 +1,11 @@
+fr.enseirb.books.persistence.H2JdbcModuleFactoryMachine
+fr.enseirb.books.persistence.jpa.JpaAuthorRepositoryFactoryMachine
+fr.enseirb.books.persistence.jpa.JpaBookRepositoryFactoryMachine
+fr.enseirb.books.persistence.jpa.JpaLibraryRepositoryFactoryMachine
+fr.enseirb.books.persistence.jpa.JpaModuleFactoryMachine
+fr.enseirb.books.service.BookServiceFactoryMachine
+fr.enseirb.books.service.LibraryServiceFactoryMachine
+fr.enseirb.books.web.rest.BookResourceFactoryMachine
+fr.enseirb.books.web.rest.BookResourceRouterFactoryMachine
+fr.enseirb.books.web.rest.LibraryResourceFactoryMachine
+fr.enseirb.books.web.rest.LibraryResourceRouterFactoryMachine

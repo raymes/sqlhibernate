@@ -1,0 +1,11 @@
+title: Create eLibrary 20130721 1110
+given:
+  - time: 2013-07-21T11:10:14.254+02:00
+wts:
+  - when: |
+       POST libraries/eLibrary
+       Cookie: RestxSession={"_expires":"2013-08-20T11:10:14.254+02:00","principal":"admin","sessionKey":"7c3a055d-49b0-422e-8406-d9eec7fa79b6"}; RestxSessionSignature=eGfw6Oh7Bg5NnEKJIieFGnwduk0=
+
+        {"name": "Amazon","url": "http://www.amazon.com"}
+    then: |
+        {"name": "Amazon","url": "http://www.amazon.com"}
