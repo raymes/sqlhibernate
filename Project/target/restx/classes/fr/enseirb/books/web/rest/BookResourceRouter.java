@@ -131,6 +131,30 @@ public class BookResourceRouter extends RestxRouter {
                 operation.sourceLocation = "fr.enseirb.books.web.rest.BookResource#find()";
             }
         },
+        new StdEntityRoute<Void, java.lang.Iterable<java.lang.String>>("default#BookResource#findTitles",
+                readerRegistry.<Void>build(Void.class, Optional.<String>absent()),
+                writerRegistry.<java.lang.Iterable<java.lang.String>>build(Types.newParameterizedType(java.lang.Iterable.class, java.lang.String.class), Optional.<String>absent()),
+                new StdRestxRequestMatcher("GET", "/books/names"),
+                HttpStatus.OK, RestxLogLevel.DEFAULT) {
+            @Override
+            protected Optional<java.lang.Iterable<java.lang.String>> doRoute(RestxRequest request, RestxRequestMatch match, Void body) throws IOException {
+                securityManager.check(request, isAuthenticated());
+                return Optional.of(resource.findTitles(
+                        
+                ));
+            }
+
+            @Override
+            protected void describeOperation(OperationDescription operation) {
+                super.describeOperation(operation);
+                
+
+                operation.responseClass = "LIST[string]";
+                operation.inEntitySchemaKey = "";
+                operation.outEntitySchemaKey = "";
+                operation.sourceLocation = "fr.enseirb.books.web.rest.BookResource#findTitles()";
+            }
+        },
         new StdEntityRoute<Void, fr.enseirb.books.domain.Book>("default#BookResource#findById",
                 readerRegistry.<Void>build(Void.class, Optional.<String>absent()),
                 writerRegistry.<fr.enseirb.books.domain.Book>build(fr.enseirb.books.domain.Book.class, Optional.<String>absent()),
@@ -160,30 +184,6 @@ public class BookResourceRouter extends RestxRouter {
                 operation.inEntitySchemaKey = "";
                 operation.outEntitySchemaKey = "fr.enseirb.books.domain.Book";
                 operation.sourceLocation = "fr.enseirb.books.web.rest.BookResource#findById(java.lang.String)";
-            }
-        },
-        new StdEntityRoute<Void, java.lang.Iterable<java.lang.String>>("default#BookResource#findTitles",
-                readerRegistry.<Void>build(Void.class, Optional.<String>absent()),
-                writerRegistry.<java.lang.Iterable<java.lang.String>>build(Types.newParameterizedType(java.lang.Iterable.class, java.lang.String.class), Optional.<String>absent()),
-                new StdRestxRequestMatcher("GET", "/books/names"),
-                HttpStatus.OK, RestxLogLevel.DEFAULT) {
-            @Override
-            protected Optional<java.lang.Iterable<java.lang.String>> doRoute(RestxRequest request, RestxRequestMatch match, Void body) throws IOException {
-                securityManager.check(request, isAuthenticated());
-                return Optional.of(resource.findTitles(
-                        
-                ));
-            }
-
-            @Override
-            protected void describeOperation(OperationDescription operation) {
-                super.describeOperation(operation);
-                
-
-                operation.responseClass = "LIST[string]";
-                operation.inEntitySchemaKey = "";
-                operation.outEntitySchemaKey = "";
-                operation.sourceLocation = "fr.enseirb.books.web.rest.BookResource#findTitles()";
             }
         },
         new StdEntityRoute<Void, java.lang.Iterable<fr.enseirb.books.domain.Book>>("default#BookResource#findByAuthorLastName",

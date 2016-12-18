@@ -514,3 +514,54 @@ One or more dependency injections can be sastifed.
 2016-11-03 12:09:14,168 [pool-3-thread-1 ] [          ] INFO  restx.classloader.CompilationManager - compilation finished: 1 sources compiled in 740,2 ms
 2016-11-03 21:02:00,199 [pool-3-thread-1 ] [          ] INFO  restx.classloader.CompilationManager - compilation finished: 1 sources compiled in 238,3 ms
 2016-11-03 21:43:21,875 [Thread-1        ] [          ] INFO  o.e.jetty.util.thread.ShutdownThread - shutdown already commenced
+2016-12-18 11:49:50,683 [main            ] [          ] INFO  org.eclipse.jetty.server.Server - jetty-8.1.8.v20121106
+2016-12-18 11:49:51,696 [main            ] [          ] INFO  restx.RestxMainRouterFactory - LOADING MAIN ROUTER
+2016-12-18 11:49:51,788 [main            ] [          ] INFO  restx.RestxMainRouterFactory - 
+--------------------------------------
+ -- RESTX >> LOAD ON REQUEST << >> DEV MODE << >> AUTO COMPILE <<
+ -- for admin console,
+ --   VISIT http://127.0.0.1:8080/api/@/ui/
+ --
+
+2016-12-18 11:49:55,612 [pool-2-thread-1 ] [          ] INFO  restx.classloader.CompilationManager - compilation finished: 19 sources compiled in 3,331 s
+2016-12-18 11:49:57,126 [main            ] [          ] INFO  restx.classloader.CompilationManager - watching for changes in [src/main/java, src/main/resources]; current location is /Users/aymesr/Desktop/Cours/Cours3A/Persistence/sqlhibernate/Project/.
+2016-12-18 11:49:57,556 [main            ] [          ] INFO  restx.monitor.MetricsConfiguration - registering Metrics JVM metrics
+2016-12-18 11:50:06,081 [qtp1990451863-34] [          ] ERROR restx.RestxMainRouterFactory - [RESTX REQUEST] GET /@/ui/ - Exception when using factory to load router: 
+  QueryByName{name=Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}}
+    |       \__=> Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}
+    |
+    +-> QueryByClass{componentClass=restx.RestxRouter[AppClassLoader]}
+      |       \__=> Name{name='BookResourceRouter', clazz=fr.enseirb.books.web.rest.BookResourceRouter[HotCompile[2]]}
+      |
+      +-> QueryByClass{componentClass=fr.enseirb.books.web.rest.BookResource[HotCompile[2]]}
+        |       \__=> Name{name='BookResource', clazz=fr.enseirb.books.web.rest.BookResource[HotCompile[2]]}
+        |
+        +-> QueryByClass{componentClass=fr.enseirb.books.service.BookService[HotCompile[2]]}
+          |       \__=> Name{name='BookService', clazz=fr.enseirb.books.service.BookService[HotCompile[2]]}
+          |
+          +-> QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]}
+                |
+                +--: component satisfying QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]} not found.
+
+Pro Tip: Set HTTP Header RestxDebug to have a dump of the factory in your logs when you get this error.
+2016-12-18 11:50:06,098 [qtp1990451863-34] [          ] WARN  restx.AbstractResponse - no charset defined while getting writer to write http response. Make sure you call setContentType() before calling getWriter(). Using UTF-8 charset.
+2016-12-18 11:50:06,101 [qtp1990451863-34] [          ] ERROR restx.RestxMainRouterFactory - Error when loading Factory to process your request.
+One or more dependency injections can be sastifed.
+
+  
+    QueryByName{name=Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}}
+      |       \__=> Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}
+      |
+      +-> QueryByClass{componentClass=restx.RestxRouter[AppClassLoader]}
+        |       \__=> Name{name='BookResourceRouter', clazz=fr.enseirb.books.web.rest.BookResourceRouter[HotCompile[2]]}
+        |
+        +-> QueryByClass{componentClass=fr.enseirb.books.web.rest.BookResource[HotCompile[2]]}
+          |       \__=> Name{name='BookResource', clazz=fr.enseirb.books.web.rest.BookResource[HotCompile[2]]}
+          |
+          +-> QueryByClass{componentClass=fr.enseirb.books.service.BookService[HotCompile[2]]}
+            |       \__=> Name{name='BookService', clazz=fr.enseirb.books.service.BookService[HotCompile[2]]}
+            |
+            +-> QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]}
+                  |
+                  +--: component satisfying QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]} not found.
+

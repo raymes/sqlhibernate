@@ -1,4 +1,4 @@
-2016-11-03 11:59:19,257 [qtp1990451863-34] [          ] ERROR restx.RestxMainRouterFactory - [RESTX REQUEST] GET /@/ui/ - Exception when using factory to load router: 
+2016-12-18 11:50:06,081 [qtp1990451863-34] [          ] ERROR restx.RestxMainRouterFactory - [RESTX REQUEST] GET /@/ui/ - Exception when using factory to load router: 
   QueryByName{name=Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}}
     |       \__=> Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}
     |
@@ -16,121 +16,7 @@
                 +--: component satisfying QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]} not found.
 
 Pro Tip: Set HTTP Header RestxDebug to have a dump of the factory in your logs when you get this error.
-2016-11-03 11:59:19,259 [qtp1990451863-34] [          ] ERROR restx.RestxMainRouterFactory - Error when loading Factory to process your request.
-One or more dependency injections can be sastifed.
-
-  
-    QueryByName{name=Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}}
-      |       \__=> Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}
-      |
-      +-> QueryByClass{componentClass=restx.RestxRouter[AppClassLoader]}
-        |       \__=> Name{name='BookResourceRouter', clazz=fr.enseirb.books.web.rest.BookResourceRouter[HotCompile[2]]}
-        |
-        +-> QueryByClass{componentClass=fr.enseirb.books.web.rest.BookResource[HotCompile[2]]}
-          |       \__=> Name{name='BookResource', clazz=fr.enseirb.books.web.rest.BookResource[HotCompile[2]]}
-          |
-          +-> QueryByClass{componentClass=fr.enseirb.books.service.BookService[HotCompile[2]]}
-            |       \__=> Name{name='BookService', clazz=fr.enseirb.books.service.BookService[HotCompile[2]]}
-            |
-            +-> QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]}
-                  |
-                  +--: component satisfying QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]} not found.
-
-2016-11-03 12:03:01,372 [qtp1990451863-35] [          ] ERROR restx.RestxMainRouterFactory - [RESTX REQUEST] GET /@/ui/ - Exception when using factory to load router: 
-  QueryByName{name=Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}}
-    |       \__=> Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}
-    |
-    +-> QueryByClass{componentClass=restx.RestxRouter[AppClassLoader]}
-      |       \__=> Name{name='BookResourceRouter', clazz=fr.enseirb.books.web.rest.BookResourceRouter[HotCompile[2]]}
-      |
-      +-> QueryByClass{componentClass=fr.enseirb.books.web.rest.BookResource[HotCompile[2]]}
-        |       \__=> Name{name='BookResource', clazz=fr.enseirb.books.web.rest.BookResource[HotCompile[2]]}
-        |
-        +-> QueryByClass{componentClass=fr.enseirb.books.service.BookService[HotCompile[2]]}
-          |       \__=> Name{name='BookService', clazz=fr.enseirb.books.service.BookService[HotCompile[2]]}
-          |
-          +-> QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]}
-                |
-                +--: component satisfying QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]} not found.
-
-Pro Tip: Set HTTP Header RestxDebug to have a dump of the factory in your logs when you get this error.
-2016-11-03 12:03:01,376 [qtp1990451863-35] [          ] ERROR restx.RestxMainRouterFactory - Error when loading Factory to process your request.
-One or more dependency injections can be sastifed.
-
-  
-    QueryByName{name=Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}}
-      |       \__=> Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}
-      |
-      +-> QueryByClass{componentClass=restx.RestxRouter[AppClassLoader]}
-        |       \__=> Name{name='BookResourceRouter', clazz=fr.enseirb.books.web.rest.BookResourceRouter[HotCompile[2]]}
-        |
-        +-> QueryByClass{componentClass=fr.enseirb.books.web.rest.BookResource[HotCompile[2]]}
-          |       \__=> Name{name='BookResource', clazz=fr.enseirb.books.web.rest.BookResource[HotCompile[2]]}
-          |
-          +-> QueryByClass{componentClass=fr.enseirb.books.service.BookService[HotCompile[2]]}
-            |       \__=> Name{name='BookService', clazz=fr.enseirb.books.service.BookService[HotCompile[2]]}
-            |
-            +-> QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]}
-                  |
-                  +--: component satisfying QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]} not found.
-
-2016-11-03 12:03:01,372 [qtp1990451863-34] [          ] ERROR restx.RestxMainRouterFactory - [RESTX REQUEST] GET /@/ui/ - Exception when using factory to load router: 
-  QueryByName{name=Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}}
-    |       \__=> Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}
-    |
-    +-> QueryByClass{componentClass=restx.RestxRouter[AppClassLoader]}
-      |       \__=> Name{name='BookResourceRouter', clazz=fr.enseirb.books.web.rest.BookResourceRouter[HotCompile[2]]}
-      |
-      +-> QueryByClass{componentClass=fr.enseirb.books.web.rest.BookResource[HotCompile[2]]}
-        |       \__=> Name{name='BookResource', clazz=fr.enseirb.books.web.rest.BookResource[HotCompile[2]]}
-        |
-        +-> QueryByClass{componentClass=fr.enseirb.books.service.BookService[HotCompile[2]]}
-          |       \__=> Name{name='BookService', clazz=fr.enseirb.books.service.BookService[HotCompile[2]]}
-          |
-          +-> QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]}
-                |
-                +--: component satisfying QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]} not found.
-
-Pro Tip: Set HTTP Header RestxDebug to have a dump of the factory in your logs when you get this error.
-2016-11-03 12:03:01,380 [qtp1990451863-34] [          ] ERROR restx.RestxMainRouterFactory - Error when loading Factory to process your request.
-One or more dependency injections can be sastifed.
-
-  
-    QueryByName{name=Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}}
-      |       \__=> Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}
-      |
-      +-> QueryByClass{componentClass=restx.RestxRouter[AppClassLoader]}
-        |       \__=> Name{name='BookResourceRouter', clazz=fr.enseirb.books.web.rest.BookResourceRouter[HotCompile[2]]}
-        |
-        +-> QueryByClass{componentClass=fr.enseirb.books.web.rest.BookResource[HotCompile[2]]}
-          |       \__=> Name{name='BookResource', clazz=fr.enseirb.books.web.rest.BookResource[HotCompile[2]]}
-          |
-          +-> QueryByClass{componentClass=fr.enseirb.books.service.BookService[HotCompile[2]]}
-            |       \__=> Name{name='BookService', clazz=fr.enseirb.books.service.BookService[HotCompile[2]]}
-            |
-            +-> QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]}
-                  |
-                  +--: component satisfying QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]} not found.
-
-2016-11-03 12:03:45,142 [qtp1990451863-34] [          ] ERROR restx.RestxMainRouterFactory - [RESTX REQUEST] GET /@/ui/ - Exception when using factory to load router: 
-  QueryByName{name=Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}}
-    |       \__=> Name{name='RestxRouting', clazz=restx.RestxRouting[AppClassLoader]}
-    |
-    +-> QueryByClass{componentClass=restx.RestxRouter[AppClassLoader]}
-      |       \__=> Name{name='BookResourceRouter', clazz=fr.enseirb.books.web.rest.BookResourceRouter[HotCompile[2]]}
-      |
-      +-> QueryByClass{componentClass=fr.enseirb.books.web.rest.BookResource[HotCompile[2]]}
-        |       \__=> Name{name='BookResource', clazz=fr.enseirb.books.web.rest.BookResource[HotCompile[2]]}
-        |
-        +-> QueryByClass{componentClass=fr.enseirb.books.service.BookService[HotCompile[2]]}
-          |       \__=> Name{name='BookService', clazz=fr.enseirb.books.service.BookService[HotCompile[2]]}
-          |
-          +-> QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]}
-                |
-                +--: component satisfying QueryByClass{componentClass=fr.enseirb.books.persistence.BookRepository[HotCompile[2]]} not found.
-
-Pro Tip: Set HTTP Header RestxDebug to have a dump of the factory in your logs when you get this error.
-2016-11-03 12:03:45,145 [qtp1990451863-34] [          ] ERROR restx.RestxMainRouterFactory - Error when loading Factory to process your request.
+2016-12-18 11:50:06,101 [qtp1990451863-34] [          ] ERROR restx.RestxMainRouterFactory - Error when loading Factory to process your request.
 One or more dependency injections can be sastifed.
 
   

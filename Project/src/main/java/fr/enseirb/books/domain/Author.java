@@ -1,7 +1,12 @@
 package fr.enseirb.books.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Author {
 
+	@Id
     private String id;
     private String firstName;
     private String lastName;

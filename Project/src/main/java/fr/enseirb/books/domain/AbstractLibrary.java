@@ -3,10 +3,20 @@ package fr.enseirb.books.domain;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.ManyToMany;
+
+@Entity
+@Inheritance
 public abstract class AbstractLibrary {
 	
+	@Id
     private String id;
     private String name;
+    
+    @ManyToMany
     private Set<Book> books = new HashSet<>();
 
     public String getId() {

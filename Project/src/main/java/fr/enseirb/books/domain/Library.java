@@ -1,5 +1,8 @@
 package fr.enseirb.books.domain;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Library extends AbstractLibrary {
 
     private Address address;

@@ -61,7 +61,7 @@ public class JpaBookRepository implements BookRepository {
     	 EntityManager em = emf.createEntityManager();
          try {
              em.getTransaction().begin();
-             return em.createQuery("from Book b", Book.class).getResultList();
+             return em.createQuery("select bfrom Book b", Book.class).getResultList();
          } finally {
              em.getTransaction().commit();
              em.close();
@@ -98,7 +98,7 @@ public class JpaBookRepository implements BookRepository {
         try {
             em.getTransaction().begin();
             // A FINIR BOOK. ...
-            return em.createQuery("select b from  Book where Book.", Book.class).getResultList();
+            return em.createQuery("select b from Book where b.author.lastName = :lastName", Book.class).setParameter("lastname",lastName).getResultList();
         } finally {
             em.getTransaction().commit();
             em.close();

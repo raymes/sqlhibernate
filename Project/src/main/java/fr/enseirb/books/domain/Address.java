@@ -1,5 +1,8 @@
 package fr.enseirb.books.domain;
 
+import javax.persistence.Embeddable;
+
+@Embeddable
 public class Address {
 
     private String body;
