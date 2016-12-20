@@ -1,6 +1,7 @@
 package fr.enseirb.books.persistence.jpa;
 
 
+import fr.enseirb.books.domain.Author;
 import fr.enseirb.books.domain.Book;
 import fr.enseirb.books.persistence.AuthorRepository;
 import fr.enseirb.books.persistence.BookRepository;
@@ -29,7 +30,15 @@ public class JpaBookRepository implements BookRepository {
     @Override
     public Book create(Book book) {
     	 book.setId(UUID.randomUUID().toString());
-    	 // Vérifier que les auteurs de book sont bien dans la BDD. Utiliser authorRepository
+    	 
+    	 Author author = book.getAuthor();
+    	 // Author isn't present in database : we create it
+    	 if(!authorRepository.findById(author.getId()).isPresent()) {
+    		 author = authorRepository.create(author);
+    	 }
+    	 // Book's author is updated, to have the id that corresponds with the author's database
+    	 book.setAuthor(author);
+    	 
          EntityManager em = emf.createEntityManager();
          try {
              em.getTransaction().begin();
@@ -39,13 +48,30 @@ public class JpaBookRepository implements BookRepository {
              em.close();
          }
 
-         return book; }
+         return book;
+         }
 
     @Override
     public Book update(Book book) {
     	 EntityManager em = emf.createEntityManager();
-    	// Vérifier que les auteurs de book sont bien dans la BDD. Utiliser authorRepository
-    	// Vérifier que le book est bien dans la BDD. Utiliser bookRepository.
+    	 // Vérifier que les auteurs de book sont bien dans la BDD. Utiliser authorRepository	
+    	 // Vérifier que le book est bien dans la BDD. Utiliser bookRepository.
+    	 
+    	 // If this book doesn't exist : no update is done
+    	 if(!this.findById(book.getId()).isPresent()) {
+    		 return null;
+    	 }
+    	 
+    	 // The book exists
+    	 Author author = book.getAuthor();
+    	// Author isn't present in database : we create it
+    	 if(!authorRepository.findById(author.getId()).isPresent()) {
+    		 author = authorRepository.create(author);
+    	 }
+    	 // Book's author is updated, to have the id that corresponds with the author's database
+    	 book.setAuthor(author);
+    	 
+    	 // We update the book in database
          try {
              em.getTransaction().begin();
              em.merge(book);
@@ -54,14 +80,15 @@ public class JpaBookRepository implements BookRepository {
              em.close();
          }
 
-         return book;    }
+         return book;   
+         }
 
     @Override
     public Iterable<Book> find() {
     	 EntityManager em = emf.createEntityManager();
          try {
              em.getTransaction().begin();
-             return em.createQuery("select bfrom Book b", Book.class).getResultList();
+             return em.createQuery("From Book b", Book.class).getResultList();
          } finally {
              em.getTransaction().commit();
              em.close();
@@ -97,8 +124,7 @@ public class JpaBookRepository implements BookRepository {
     	EntityManager em = emf.createEntityManager();
         try {
             em.getTransaction().begin();
-            // A FINIR BOOK. ...
-            return em.createQuery("select b from Book where b.author.lastName = :lastName", Book.class).setParameter("lastname",lastName).getResultList();
+            return em.createQuery("From Book b where b.author.lastName = :lastName", Book.class).setParameter("lastName",lastName).getResultList();
         } finally {
             em.getTransaction().commit();
             em.close();

@@ -8,6 +8,8 @@ import fr.enseirb.books.persistence.LibraryRepository;
 import restx.factory.Alternative;
 import restx.factory.When;
 
+import java.util.HashSet;
+import java.util.Set;
 import java.util.UUID;
 
 import javax.persistence.EntityManager;
@@ -28,6 +30,21 @@ public class JpaLibraryRepository implements LibraryRepository {
     @Override
     public <L extends AbstractLibrary> L create(L library) {
     	 library.setId(UUID.randomUUID().toString());
+    	 
+    	 Set<Book> books = library.getBooks();
+    	 // Set of books treated : with correct ids
+    	 Set<Book> treatmentBooks = new HashSet<Book>();
+    	 
+    	 // Check if books exist in database
+    	 for(Book book : books) {
+	    	 // Book isn't present in database : we create it
+	    	 if(!bookRepository.findById(book.getId()).isPresent()) {
+	    		 book = bookRepository.create(book);
+	    	 }
+    		 treatmentBooks.add(book);
+    	 }
+    	 // Library's book is updated, to have the correct ids
+    	 library.setBooks(treatmentBooks);
 
          EntityManager em = emf.createEntityManager();
          try {
@@ -44,7 +61,23 @@ public class JpaLibraryRepository implements LibraryRepository {
     @Override 
     public <L extends AbstractLibrary> L update(L library) {
     	EntityManager em = emf.createEntityManager();
-    	// Vérifier que les book e L sont bien dans la BDD. Utiliser bookRepository.
+
+    	Set<Book> books = library.getBooks();
+	   	// Set of books treated : with correct ids
+	   	Set<Book> treatmentBooks = new HashSet<Book>();
+	   	 
+	   	// Check if books exist in database
+	   	for(Book book : books) {
+		   	 // Book isn't present in database : we create it
+		   	 if(!bookRepository.findById(book.getId()).isPresent()) {
+		   		 book = bookRepository.create(book);
+		   	 }
+	   	 treatmentBooks.add(book);
+	  	}
+	   	// Library's book is updated, to have the correct ids
+	   	library.setBooks(treatmentBooks);
+   	 
+   	 
          try {
              em.getTransaction().begin();
              em.merge(library);
@@ -61,7 +94,7 @@ public class JpaLibraryRepository implements LibraryRepository {
     	EntityManager em = emf.createEntityManager();
         try {
             em.getTransaction().begin();
-            return em.createQuery("select l from AbstractLibrary", AbstractLibrary.class).getResultList();
+            return em.createQuery("From AbstractLibrary l", AbstractLibrary.class).getResultList();
         } finally {
             em.getTransaction().commit();
             em.close();
@@ -70,7 +103,14 @@ public class JpaLibraryRepository implements LibraryRepository {
 
     @Override
     public Optional<AbstractLibrary> findById(String id) {
-        return null;
+    	 EntityManager em = emf.createEntityManager();
+         try {
+             em.getTransaction().begin();
+             return Optional.fromNullable(em.find(AbstractLibrary.class, id));
+         } finally {
+             em.getTransaction().commit();
+             em.close();
+         }
     }
 
     @Override
@@ -78,7 +118,7 @@ public class JpaLibraryRepository implements LibraryRepository {
     	EntityManager em = emf.createEntityManager();
         try {
             em.getTransaction().begin();
-            Book toDelete = em.find(Book.class, library.getId());
+            AbstractLibrary toDelete = em.find(AbstractLibrary.class, library.getId());
             if (toDelete != null) {
                 em.remove(toDelete);
             }

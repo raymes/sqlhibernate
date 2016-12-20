@@ -45,7 +45,7 @@ public class JpaAuthorRepository implements AuthorRepository {
     	EntityManager em = emf.createEntityManager();
         try {
             em.getTransaction().begin();
-            List<Author> authors = em.createQuery("select a from Author where a.id = :id", Author.class)
+            List<Author> authors = em.createQuery("From Author a where a.id = :id", Author.class)
                                     .setParameter("id", id)
                                     .getResultList();
             if (authors.isEmpty()) {
